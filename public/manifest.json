@@ -1,0 +1,16 @@
+{
+    "name": "Bijbels Grieks",
+    "short_name": "Grieks",
+    "manifest_version": 4,
+    "icons": [
+        {
+            "src": "img/icons/512-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/index.html",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "theme_color": "#4DBA87"
+}
