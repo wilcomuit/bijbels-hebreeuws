@@ -1,7 +1,7 @@
 const questions: Array<QuestionType> = [
   {
     question: 'אָב',
-    answers: ['vader', 'voorvader'],
+    answers: ['vader', 'voorvader', 'stamvader'],
     type: 'woordenschat'
   },
   {
@@ -20,7 +20,7 @@ const questions: Array<QuestionType> = [
     type: 'woordenschat'
   },
   {
-    question: 'אִשָׁהׁ',
+    question: 'אִשָּׁהׁ',
     answers: ['vrouw'],
     type: 'woordenschat'
   },
@@ -61,22 +61,22 @@ const questions: Array<QuestionType> = [
   },
   {
     question: 'עִיר',
-    answers: ['stad'],
+    answers: ['stad', 'woonplaats'],
     type: 'woordenschat'
   },
   {
     question: 'עוֹף',
-    answers: ['vogel', 'vogels'],
+    answers: ['vogel', 'gevogelte'],
     type: 'woordenschat'
   },
   {
     question: 'עַם',
-    answers: ['mensen', 'volk'],
+    answers: ['volk'],
     type: 'woordenschat'
   },
   {
     question: 'קוֹל',
-    answers: ['stem'],
+    answers: ['geluid', 'stem'],
     type: 'woordenschat'
   },
   {
