@@ -15,6 +15,8 @@ export const useHebrewPracticeStore = defineStore('hebrewPractice', () => {
   const hintCount = ref(0)
   const totalCount = ref(0)
 
+  const voice: Ref<any> = ref(null)
+
   function startPractice() {
     for (const lesson of useLessonsStore().getActiveLessons()) {
       for (const question of lesson.questions as Array<MixedQuestionType>) {
@@ -60,6 +62,14 @@ export const useHebrewPracticeStore = defineStore('hebrewPractice', () => {
     hintCount.value++
   }
 
+
+  async function speak(text: string) {
+    if (!voice.value) return
+    const msg = new SpeechSynthesisUtterance(text);
+    msg.voice = voice.value;
+    window?.speechSynthesis.speak(msg);
+  }
+
   function getNextRandomQuestion() {
     if (questions.value.length === 0) return false
     const index = Math.floor(Math.random() * questions.value.length)
@@ -70,7 +80,10 @@ export const useHebrewPracticeStore = defineStore('hebrewPractice', () => {
         ...question.correctOptions,
         ...question.wrongOptions
       ])
-    console.log(currentQuestion)
+
+
+    speak(question.question)
+
     return currentQuestion.value
   }
 
@@ -121,6 +134,10 @@ export const useHebrewPracticeStore = defineStore('hebrewPractice', () => {
     return array
   }
 
+  function setVoice(newVoice: any) {
+    voice.value = newVoice
+  }
+
   return {
     //font,
     questions,
@@ -134,6 +151,7 @@ export const useHebrewPracticeStore = defineStore('hebrewPractice', () => {
     startPractice,
     resetQuestions,
     getNextRandomQuestion,
-    submitAnswer
+    submitAnswer,
+    setVoice
   }
 })

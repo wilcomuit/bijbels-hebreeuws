@@ -1,6 +1,20 @@
 <script setup lang="ts">
 import { useLessonsStore } from '../stores/lessons'
 import { useHebrewPracticeStore } from '../stores/practice'
+
+
+
+
+window.speechSynthesis.addEventListener("voiceschanged", function() {
+  for (const newVoice of window.speechSynthesis.getVoices()) {
+    if (newVoice.lang === 'he-IL') {
+      useHebrewPracticeStore().setVoice(newVoice)
+      break
+    }
+  }
+});
+
+
 </script>
 
 <template>
