@@ -3,16 +3,19 @@ import { useLessonsStore } from '../stores/lessons'
 import { useHebrewPracticeStore } from '../stores/practice'
 
 
-
-
-window.speechSynthesis.addEventListener("voiceschanged", function() {
-  for (const newVoice of window.speechSynthesis.getVoices()) {
-    if (newVoice.lang === 'he-IL') {
-      useHebrewPracticeStore().setVoice(newVoice)
-      break
+const setupTTS = () => {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return
+  window.speechSynthesis.addEventListener("voiceschanged", function() {
+    for (const newVoice of window.speechSynthesis.getVoices()) {
+      if (newVoice.lang === 'he-IL') {
+        useHebrewPracticeStore().setVoice(newVoice)
+        break
+      }
     }
-  }
-});
+  });
+}
+
+
 
 
 </script>
