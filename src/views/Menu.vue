@@ -1,19 +1,25 @@
 <script setup lang="ts">
 import { useLessonsStore } from '../stores/lessons'
 import { useHebrewPracticeStore } from '../stores/practice'
+import { type Ref, ref } from 'vue'
 
-
+const error: Ref<string> = ref('')
 const setupTTS = () => {
-  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return
-  window.speechSynthesis.addEventListener("voiceschanged", function() {
-    for (const newVoice of window.speechSynthesis.getVoices()) {
-      if (newVoice.lang === 'he-IL') {
-        useHebrewPracticeStore().setVoice(newVoice)
-        break
+  try {
+    if (typeof window === 'undefined' || !('speechSynthesis' in window)) return
+    window.speechSynthesis.addEventListener("voiceschanged", function() {
+      for (const newVoice of window?.speechSynthesis?.getVoices()||[]) {
+        if (newVoice.lang === 'he-IL') {
+          useHebrewPracticeStore().setVoice(newVoice)
+          break
+        }
       }
-    }
-  });
+    });
+  }catch (e) {
+error.value = JSON.stringify(e)
+  }
 }
+setupTTS()
 
 
 
@@ -23,6 +29,8 @@ const setupTTS = () => {
 <template>
   <main class="main-menu">
     <h1>Welkom!</h1>
+
+    {{error }}
     <h3>Selecteer items om te oefenen.</h3>
     <div v-for="lesson in useLessonsStore().lessons" :key="lesson.id">
       <input
