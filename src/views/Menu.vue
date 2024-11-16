@@ -3,7 +3,7 @@ import { useLessonsStore } from '../stores/lessons'
 import { useHebrewPracticeStore } from '../stores/practice'
 import { type Ref, ref } from 'vue'
 
-const error: Ref<string> = ref('')
+const error: Ref<any> = ref('')
 const setupTTS = () => {
   try {
     if (typeof window === 'undefined' || !('speechSynthesis' in window)) return
@@ -16,7 +16,7 @@ const setupTTS = () => {
       }
     });
   }catch (e) {
-error.value = JSON.stringify(e)
+error.value =e
   }
 }
 setupTTS()
@@ -30,7 +30,7 @@ setupTTS()
   <main class="main-menu">
     <h1>Welkom!</h1>
 
-    {{error }}
+    error: {{error }}
     <h3>Selecteer items om te oefenen.</h3>
     <div v-for="lesson in useLessonsStore().lessons" :key="lesson.id">
       <input
