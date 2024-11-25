@@ -20,7 +20,7 @@ const questions: Array<QuestionType> = [
     type: 'woordenschat'
   },
   {
-    question: 'אִשָּׁהׁ',
+    question: 'אִשָּׁה',
     answers: ['vrouw'],
     type: 'woordenschat'
   },
