@@ -90,11 +90,11 @@ const questions: Array<QuestionType> = [
     type: 'woordenschat'
   }
 ]
-const lesson2Vocabulary: LessonType = {
+const lesson2and3Vocabulary: LessonType = {
   id: 'lesson2-vocabulary',
-  name: 'Les 2 – Woordenschat',
+  name: 'Les 2 en 3 – Woordenschat',
   type: 'woordenschat',
   active: false,
   questions
 }
-export default lesson2Vocabulary
+export default lesson2and3Vocabulary
