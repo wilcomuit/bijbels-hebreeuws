@@ -67,6 +67,8 @@ export const useHebrewPracticeStore = defineStore('hebrewPractice', () => {
     if (!voice.value) return
     const msg = new SpeechSynthesisUtterance(text);
     msg.voice = voice.value;
+    msg.rate = 0.5
+    window?.speechSynthesis?.cancel()
     window?.speechSynthesis.speak(msg);
   }
 
@@ -147,6 +149,7 @@ export const useHebrewPracticeStore = defineStore('hebrewPractice', () => {
     wrongAnswers,
     correctAnswerCount,
     hintCount,
+    speak,
     addHintCount,
     startPractice,
     resetQuestions,

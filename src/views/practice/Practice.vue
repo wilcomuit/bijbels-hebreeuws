@@ -33,7 +33,8 @@ const questionPrefix = computed(() => {
 
     <div class="question-block">
       <h1 v-if="questionPrefix">{{ questionPrefix }}</h1>
-      <h2 class="question question-font">{{ useHebrewPracticeStore().currentQuestion.question }}</h2>
+      <h2 class="question question-font" @click='useHebrewPracticeStore().speak(useHebrewPracticeStore().currentQuestion.question)'>{{ useHebrewPracticeStore().currentQuestion.question
+        }}</h2>
       <Vocabulary
         v-if="useHebrewPracticeStore().currentQuestion.type === 'woordenschat'"
         @setHideAnswer="(val) => (hideAnswer = val)"
