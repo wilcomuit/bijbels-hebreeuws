@@ -30,6 +30,7 @@ const items = computed(() => {
     </div>
 
     <EasyDataTable
+      class='question-font'
       :headers="headers"
       :items="items"
       alternating
