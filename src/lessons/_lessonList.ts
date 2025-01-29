@@ -4,6 +4,7 @@ import lesson5Vocabulary from '@/lessons/lesson5/vocabulary'
 import lesson6Vocabulary from '@/lessons/lesson6/vocabulary'
 import lesson7Vocabulary from '@/lessons/lesson7/vocabulary'
 import lesson8Vocabulary from '@/lessons/lesson8/vocabulary'
+import lesson9Vocabulary from '@/lessons/lesson9/vocabulary'
 
 export default function lessonList() {
   return [
@@ -12,6 +13,7 @@ export default function lessonList() {
     lesson5Vocabulary,
     lesson6Vocabulary,
     lesson7Vocabulary,
-    lesson8Vocabulary
+    lesson8Vocabulary,
+    lesson9Vocabulary,
   ]
 }
