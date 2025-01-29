@@ -99,7 +99,7 @@ export const useHebrewPracticeStore = defineStore('hebrewPractice', () => {
 
   function submitAnswer(answer: string) {
     if (
-      (['vervoeging', 'woordenschat'].includes(currentQuestion.value.type) &&
+      (['vervoeging', 'woordenschat', 'personal-pronouns'].includes(currentQuestion.value.type) &&
         currentQuestion.value.answers
           .map((answer: string) => answer.toLowerCase())
           .includes(answer)) ||

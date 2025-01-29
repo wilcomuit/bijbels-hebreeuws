@@ -31,6 +31,8 @@ type MixedQuestionType = {
 }
 
 type ConjugationQuestionType = {
+  question?: string
+  answers?: Array<string>
   ev_nominatief?: string
   ev_accusatief?: string
   ev_genitief?: string

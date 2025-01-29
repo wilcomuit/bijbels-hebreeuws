@@ -1,74 +1,74 @@
-const questions: Array<QuestionType> = [
+const questions: Array<ConjugationQuestionType> = [
   {
     question: 'הוּא',
-    answers: ['hij'],
-    type: 'woordenschat'
+    answers: ['ev_hij'],
+    type: 'personal-pronouns'
   },
   {
     question: 'הִיא',
-    answers: ['zij'],
-    type: 'woordenschat'
+    answers: ['ev_zij'],
+    type: 'personal-pronouns'
   },
   {
     question: 'אַתָּה',
-    answers: ['jij'],
-    type: 'woordenschat'
+    answers: ['ev_jij_m'],
+    type: 'personal-pronouns'
   },
   {
     question: 'אַתְּ',
-    answers: ['jij'],
-    type: 'woordenschat'
+    answers: ['ev_jij_v'],
+    type: 'personal-pronouns'
   },
   {
     question: 'אֲנִי',
-    answers: ['ik'],
-    type: 'woordenschat'
+    answers: ['ev_ik'],
+    type: 'personal-pronouns'
   },
   {
     question: 'אָנֹכִי',
-    answers: ['ik'],
-    type: 'woordenschat'
+    answers: ['ev_ik'],
+    type: 'personal-pronouns'
   },
   {
     question: 'הֵם',
-    answers: ['zij'],
-    type: 'woordenschat'
+    answers: ['mv_zij_m'],
+    type: 'personal-pronouns'
   },
   {
     question: 'הֵמָּה',
-    answers: ['zij'],
-    type: 'woordenschat'
+    answers: ['mv_zij_m'],
+    type: 'personal-pronouns'
   },
   {
     question: 'הֵנָּה',
-    answers: ['zij'],
-    type: 'woordenschat'
+    answers: ['mv_zij_v'],
+    type: 'personal-pronouns'
   },
   {
     question: 'אַתֶּם',
-    answers: ['jullie'],
-    type: 'woordenschat'
+    answers: ['mv_jullie_m'],
+    type: 'personal-pronouns'
   },
   {
     question: 'אַתֵּן',
-    answers: ['jullie'],
-    type: 'woordenschat'
+    answers: ['mv_jullie_v'],
+    type: 'personal-pronouns'
   },
   {
     question: 'אַתֵּנָה',
-    answers: ['jullie'],
-    type: 'woordenschat'
+    answers: ['mv_jullie_v'],
+    type: 'personal-pronouns'
   },
   {
     question: 'נַחְנוּ',
-    answers: ['wij'],
-    type: 'woordenschat'
+    answers: ['mv_wij'],
+    type: 'personal-pronouns'
   },
   {
     question: 'אֲנַחְנוּ',
-    answers: ['wij'],
-    type: 'woordenschat'
-  },
+    answers: ['mv_wij'],
+    type: 'personal-pronouns'
+  }
 ]
 const lesson8PersonalPronouns: LessonType = {
   id: 'lesson8-personal-pronouns',

@@ -6,6 +6,7 @@ import Conjugation from '@/views/questionTypes/Conjugation.vue'
 import Footer from './Footer.vue'
 import Vocabulary from '@/views/questionTypes/Vocabulary.vue'
 import Sentence from '@/views/questionTypes/Sentence.vue'
+import PersonalPronouns from '@/views/questionTypes/PersonalPronouns.vue'
 
 const answerInput: any = ref(null)
 const hideAnswer: Ref<boolean> = ref(true)
@@ -41,6 +42,11 @@ const questionPrefix = computed(() => {
       />
       <Sentence
         v-if="useHebrewPracticeStore().currentQuestion.type === 'sentence'"
+        @setHideAnswer="(val) => (hideAnswer = val)"
+      />
+      <PersonalPronouns
+        v-if="useHebrewPracticeStore().currentQuestion.type === 'personal-pronouns'"
+        :hide-answer="hideAnswer"
         @setHideAnswer="(val) => (hideAnswer = val)"
       />
       <Conjugation
