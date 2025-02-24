@@ -7,6 +7,7 @@ import lesson8Vocabulary from '@/lessons/lesson8/vocabulary'
 import lesson9Vocabulary from '@/lessons/lesson9/vocabulary'
 import lesson8PersonalPronouns from '@/lessons/lesson8/personalPronouns'
 import lesson10Vocabulary from '@/lessons/lesson10/vocabulary'
+import lesson11Vocabulary from '@/lessons/lesson11/vocabulary'
 
 export default function lessonList() {
   return [
@@ -19,5 +20,6 @@ export default function lessonList() {
     lesson8PersonalPronouns,
     lesson9Vocabulary,
     lesson10Vocabulary,
+    lesson11Vocabulary
   ]
 }
