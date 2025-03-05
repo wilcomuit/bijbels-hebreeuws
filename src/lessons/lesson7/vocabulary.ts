@@ -51,6 +51,11 @@ const questions: Array<QuestionType> = [
     type: 'woordenschat'
   },
   {
+    question: 'עַז',
+    answers: ['sterk', 'krachtig'],
+    type: 'woordenschat'
+  },
+  {
     question: 'קָדוֹשׁ',
     answers: ['heilig'],
     type: 'woordenschat'
