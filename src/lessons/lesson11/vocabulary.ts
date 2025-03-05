@@ -1,7 +1,7 @@
 const questions: Array<QuestionType> = [
   {
     question: 'אוֹ',
-    answers: ['of', 'en'],
+    answers: ['of', 'en', 'maar als', 'of anders'],
     type: 'woordenschat'
   },
   {
