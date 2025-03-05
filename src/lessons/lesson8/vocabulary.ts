@@ -91,12 +91,12 @@ const questions: Array<QuestionType> = [
   },
   {
     question: 'הוּא',
-    answers: ['hij'],
+    answers: ['hij', 'die', 'dat'],
     type: 'woordenschat'
   },
   {
     question: 'הִיא',
-    answers: ['zij'],
+    answers: ['zij', 'die', 'dat'],
     type: 'woordenschat'
   },
   {
@@ -121,17 +121,17 @@ const questions: Array<QuestionType> = [
   },
   {
     question: 'הֵם',
-    answers: ['zij'],
+    answers: ['zij', 'die'],
     type: 'woordenschat'
   },
   {
     question: 'הֵמָּה',
-    answers: ['zij'],
+    answers: ['zij', 'die'],
     type: 'woordenschat'
   },
   {
     question: 'הֵנָּה',
-    answers: ['zij'],
+    answers: ['zij', 'die'],
     type: 'woordenschat'
   },
   {
@@ -159,6 +159,21 @@ const questions: Array<QuestionType> = [
     answers: ['wij'],
     type: 'woordenschat'
   },
+  {
+    question: 'זֶה',
+    answers: ['deze', 'dit'],
+    type: 'woordenschat'
+  },
+  {
+    question: 'זֹאת',
+    answers: ['deze', 'dit'],
+    type: 'woordenschat'
+  },
+  {
+    question: 'אֵלֶּה',
+    answers: ['deze'],
+    type: 'woordenschat'
+  }
 ]
 const lesson8Vocabulary: LessonType = {
   id: 'lesson8-vocabulary',

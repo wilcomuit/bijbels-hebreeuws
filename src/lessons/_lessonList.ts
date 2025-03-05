@@ -10,12 +10,14 @@ import lesson10Vocabulary from '@/lessons/lesson10/vocabulary'
 import lesson11Vocabulary from '@/lessons/lesson11/vocabulary'
 import lesson10AttachedPersonalPronouns from '@/lessons/lesson10/attachedPersonalPronouns'
 import lesson12Vocabulary from '@/lessons/lesson12/vocabulary'
+import lesson5Prepositions from '@/lessons/lesson5/prepositions'
 
 export default function lessonList() {
   return [
     lesson2and3Vocabulary,
     lesson4Vocabulary,
     lesson5Vocabulary,
+    lesson5Prepositions,
     lesson6Vocabulary,
     lesson7Vocabulary,
     lesson8Vocabulary,
