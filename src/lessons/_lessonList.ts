@@ -12,6 +12,8 @@ import lesson10AttachedPersonalPronouns from '@/lessons/lesson10/attachedPersona
 import lesson12Vocabulary from '@/lessons/lesson12/vocabulary'
 import lesson5Prepositions from '@/lessons/lesson5/prepositions'
 import lesson13Vocabulary from '@/lessons/lesson13/vocabulary'
+import lesson12Numbers from '@/lessons/lesson12/numbers'
+import lesson12OrdinalNumbers from '@/lessons/lesson12/ordinalNumbers'
 
 export default function lessonList() {
   return [
@@ -28,6 +30,8 @@ export default function lessonList() {
     lesson10AttachedPersonalPronouns,
     lesson11Vocabulary,
     lesson12Vocabulary,
+    //lesson12Numbers,
+    lesson12OrdinalNumbers,
     lesson13Vocabulary
   ]
 }

@@ -20,16 +20,18 @@ export const useHebrewPracticeStore = defineStore('hebrewPractice', () => {
   function startPractice() {
     for (const lesson of useLessonsStore().getActiveLessons()) {
       for (const question of lesson.questions as Array<MixedQuestionType>) {
-        if (question.type === 'vervoeging') {
+
+        if (question.type === 'vervoeging' || question.type ==='numbers-woordenschat') {
           const results: Array<any> = []
           for (const [key, value] of Object.entries(question)) {
-            if (key === 'type') continue
+            if (key === 'type' || key === 'vocabularyAnswers') continue
             const foundResult = results.find((r: any) => r.question === value)
             if (foundResult) foundResult.answers.push(key)
             else
               results.push({
                 question: value,
                 answers: [key],
+                vocabularyAnswers: question.vocabularyAnswers,
                 type: question.type
               })
           }
@@ -97,8 +99,15 @@ export const useHebrewPracticeStore = defineStore('hebrewPractice', () => {
     return results
   }
 
-  function submitAnswer(answer: string) {
+  function submitAnswer(answer: string, vocabularyAnswer: string = '') {
     if (
+      (['numbers-woordenschat'].includes(currentQuestion.value.type) &&
+        currentQuestion.value.answers
+        .map((answer: string) => answer.toLowerCase())
+        .includes(answer)&& currentQuestion.value.vocabularyAnswers
+        .map((answer: string) => answer.toLowerCase())
+        .includes(vocabularyAnswer))
+      ||
       (['vervoeging', 'woordenschat', 'personal-pronouns', 'attached-personal-pronouns'].includes(currentQuestion.value.type) &&
         currentQuestion.value.answers
           .map((answer: string) => answer.toLowerCase())

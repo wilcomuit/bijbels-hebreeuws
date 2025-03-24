@@ -8,6 +8,7 @@ import Vocabulary from '@/views/questionTypes/Vocabulary.vue'
 import Sentence from '@/views/questionTypes/Sentence.vue'
 import PersonalPronouns from '@/views/questionTypes/PersonalPronouns.vue'
 import AttachedPersonalPronouns from '@/views/questionTypes/AttachedPersonalPronouns.vue'
+import NumberWithVocabulary from '@/views/questionTypes/NumberWithVocabulary.vue'
 
 const answerInput: any = ref(null)
 const hideAnswer: Ref<boolean> = ref(true)
@@ -57,6 +58,11 @@ const questionPrefix = computed(() => {
       />
       <Conjugation
         v-if="useHebrewPracticeStore().currentQuestion.type === 'vervoeging'"
+        :hide-answer="hideAnswer"
+        @setHideAnswer="(val) => (hideAnswer = val)"
+      />
+      <NumberWithVocabulary
+        v-if="useHebrewPracticeStore().currentQuestion.type === 'numbers-woordenschat'"
         :hide-answer="hideAnswer"
         @setHideAnswer="(val) => (hideAnswer = val)"
       />
