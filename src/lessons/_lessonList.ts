@@ -30,7 +30,7 @@ export default function lessonList() {
     lesson10AttachedPersonalPronouns,
     lesson11Vocabulary,
     lesson12Vocabulary,
-    //lesson12Numbers,
+    lesson12Numbers,
     lesson12OrdinalNumbers,
     lesson13Vocabulary
   ]

@@ -125,12 +125,18 @@ export const useHebrewPracticeStore = defineStore('hebrewPractice', () => {
       }
     } else {
 
-      wrongAnswers.value.push({
+      const tempObject = {
         question: currentQuestion.value.question,
         // @ts-ignore
         wrongAnswer: answer?.replaceAll('_', ' '),
         correctAnswer: currentQuestion.value.answers.join(', ')?.replaceAll('_', ' ')
-      })
+      }
+      
+      if(currentQuestion.value.type === 'numbers-woordenschat') {
+        tempObject.wrongAnswer += `: ${vocabularyAnswer}`
+        tempObject.correctAnswer += `: ${currentQuestion.value.vocabularyAnswers.join(', ')?.replaceAll('_', ' ')}`
+      }
+      wrongAnswers.value.push(tempObject)
       wrongAnswerCount.value++
     }
     if (questions.value.length === 0) useStateStore().setState('endScreen')
