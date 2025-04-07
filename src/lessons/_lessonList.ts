@@ -14,6 +14,7 @@ import lesson5Prepositions from '@/lessons/lesson5/prepositions'
 import lesson13Vocabulary from '@/lessons/lesson13/vocabulary'
 import lesson12Numbers from '@/lessons/lesson12/numbers'
 import lesson12OrdinalNumbers from '@/lessons/lesson12/ordinalNumbers'
+import lesson14Vocabulary from '@/lessons/lesson14/vocabulary'
 
 export default function lessonList() {
   return [
@@ -32,6 +33,7 @@ export default function lessonList() {
     lesson12Vocabulary,
     lesson12Numbers,
     lesson12OrdinalNumbers,
-    lesson13Vocabulary
+    lesson13Vocabulary,
+    lesson14Vocabulary
   ]
 }
