@@ -36,7 +36,7 @@ const questions: Array<QuestionType> = [
   },
   {
     question: 'עַל',
-    answers: ['op', 'naar'],
+    answers: ['op', 'naar', 'boven', 'wat boven is'],
     type: 'woordenschat'
   },
   {

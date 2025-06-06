@@ -37,11 +37,6 @@ const questions: Array<QuestionType> = [
     type: 'woordenschat'
   },
   {
-    question: 'עַל',
-    answers: ['boven', 'wat boven is'],
-    type: 'woordenschat'
-  },
-  {
     question: 'תַּחַת',
     answers: ['onder', 'in plaats van'],
     type: 'woordenschat'

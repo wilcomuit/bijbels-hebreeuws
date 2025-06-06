@@ -1,7 +1,7 @@
 const questions: Array<NumbersQuestionType> = [
   {
-    m_abs: 'אֶחָר',
-    m_cst: 'אַחַר',
+    m_abs: 'אֶחָד',
+    m_cst: 'אַחַד',
     f_abs: 'אַחַת',
     f_cst: 'אַחַת',
     vocabularyAnswers: ['een'],
