@@ -22,6 +22,7 @@ import lesson19Vocabulary from '@/lessons/lesson19/vocabulary'
 import lesson21Vocabulary from '@/lessons/lesson21/vocabulary'
 import lesson22Vocabulary from '@/lessons/lesson22/vocabulary'
 import lesson23Vocabulary from '@/lessons/lesson23/vocabulary'
+import lesson24Vocabulary from '@/lessons/lesson24/vocabulary'
 
 export default function lessonList() {
   return [
@@ -48,6 +49,7 @@ export default function lessonList() {
     lesson19Vocabulary,
     lesson21Vocabulary,
     lesson22Vocabulary,
-    lesson23Vocabulary
+    lesson23Vocabulary,
+    lesson24Vocabulary
   ]
 }
